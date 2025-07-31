@@ -366,9 +366,9 @@ nav a:hover::after{
     max-width: 800px;
 }
 
-.work-box p{
+.work-box p, li{
     font-size: 16px;
-    
+    font-family: serif;
 }
 
 .work-box ul{
