@@ -1,0 +1,522 @@
+/*-----------------------------------*/
+/*----- basic setup*/
+/*-----------------------------------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%; /* 10px */
+    scroll-behavior: smooth;
+}
+
+@media(max-width: 800px){
+    html {
+        font-size: 55%;
+    }
+}
+
+/*Pseudo class to define variables*/
+:root {
+    /*-- Font colors --*/
+    --pink: #F2D8CE;
+    --white: #FEF7EF;
+    --gray: #3D3E40;
+    --peach: #F29877;
+    --lightblue: #C1D6D9;
+    --lightpurple: #be5bbe;
+    --purple: #800080;
+    
+    /*-- Navigation --*/
+    --nav-height: 10rem;
+    
+    /*-- Margins --*/
+    --gutter-xx-small: 2rem;
+    --gutter-x-small: 3rem;
+    --gutter-small: 4rem;
+    --gutter-medium:6rem;
+    --gutter-large: 8rem;
+    --gutter-xlarge: 10rem;
+    --gutter-xxlarge: 20rem;
+}
+
+body{
+    font-family: "Hagrid", sans-serif;
+    color:var(--gray) ;    
+    font-weight: 100;
+    font-style: normal;
+    font-size: 1.8rem;
+    line-height: 1.7;
+    /*text-shadow: 6px 6px 6px #aaa;*/
+    background-image: url("photos/Clouds_2560_1440.png");
+    background-size: cover;
+    background-position:center;
+    overflow-x: hidden;
+}
+
+img {
+   max-width: 100%;
+   object-fit: contain; 
+}
+
+a{
+    color:var(--purple) ;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.btn{
+    position: relative;
+    display: inline-block;
+    padding: 1.2rem 4rem;
+    border: 1px solid var(--pink);
+    background-color: var(--lightpurple);
+    color: black;
+    font-size: 2.2rem;
+    font-weight: 400;
+    z-index: 1;
+    overflow-x: hidden;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: var(--pink);
+    transition: all 0.2s cubic-bezier(1, 0.68, 0.16, 0.9);
+    z-index: -1;
+}
+
+.btn:hover::after{
+    right: 0;
+}
+
+/* made for btn to view github repository, not being used*/
+.btn-text {
+    display: inline-block;
+    padding: 0.8rem 0.5rem;
+    border-bottom: 1px solid purple; 
+}
+
+img{
+    object-fit: contain;
+}
+
+section {
+    padding: var(--gutter-xlarge) 0;
+    border-bottom:1px solid #222222;
+}
+
+.row{
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+/*-----------------------------------*/
+/*----- Responsive Design setup - Rows (for devices like cell phone and tablets) */
+/*-----------------------------------*/
+
+@media(max-width: 1350px){
+    .row {
+        padding: 0 var(--gutter-large);
+    }
+}
+
+@media(max-width: 850px ){
+    .row {
+        padding: 0 var(--gutter-medium);
+    }
+}
+
+@media(max-width: 560px){
+    .row{
+        padding: 0 var(--gutter-small);
+    }
+}
+
+@media(max-width: 560px){
+    .row{
+        padding: 0 var(--gutter-xx-small);
+    }
+}
+
+/*-----------------------------------*/
+/*----- Fonts */
+/*-----------------------------------*/
+
+h1,
+h2,
+h3 {
+    line-height: 1.1;
+}
+
+h1{
+    font-size:7.5rem;
+    color:purple;
+    font-family:"Uncial Antiqua", system-ui;
+    font-weight: 300;
+    font-style: normal;
+}
+
+h2 {
+    font-family: "Hagrid", sans-serif;
+    font-weight: 400;
+    font-size: 5.5rem;
+    color:var(--gray) ;
+    font-style: normal;    
+    text-shadow: 6px 6px 6px #aaa;
+}
+
+/* this is the line under all h2s*/
+h2::after {
+    content: "";
+    display: block;
+    height: 0.3rem;
+    width: 20rem;
+    margin-top: .5rem;
+    background-color: purple;
+}
+
+h3 {
+    font-size:3rem ;
+}
+
+/*-----------------------------------*/
+/*----- Responsive Design setup - Fonts (for devices like cell phone and tablets) */
+/*-----------------------------------*/
+
+@media(max-width: 590px){
+    h1 {
+        font-size: 5.5rem;
+    }
+
+    h2{
+        font-size: 3rem;
+    }
+
+    h3{
+        font-size: 1.5rem;
+    }
+}
+
+ul {
+    list-style-position: none;
+}
+
+/*-----------------------------------*/
+/*----- Header*/
+/*-----------------------------------*/
+
+header{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url("photos/Mountain_2560_1440.png");
+    background-size: cover;
+    background-position:center;
+    background-attachment: fixed;
+}
+
+/*-----------------------------------*/
+/*----- Responsive Design setup - Header (for devices like cell phone and tablets) */
+/*-----------------------------------*/
+
+@media(max-width: 540px){
+    header{
+        justify-content: center;
+        text-align: center;
+    }
+
+    .header-text-container{
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-text-container p{
+        font-size: 10px;
+    }
+}
+
+header .row {
+    width: 100%;
+
+}
+
+/* includes div object */
+.header-text-container{
+    display: flex;
+    align-items: center;
+    height: calc(100% - 15rem);
+    /*background-color:var(--white);
+    opacity: .9;*/
+}
+
+/*.header-text-container div {
+    margin: 1rem 0 1rem;    
+    display: flex;
+    align-items: center;
+    height: calc(100% - 100rem);
+    background-color:var(--white);
+    opacity: .9;    
+}*/
+
+/* this is the paragraph under my name*/
+.header-text-container p{
+    font-family: "Hagrid", sans-serif;
+    font-size: 14px;
+    color:var(--gray) ;    
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 6px 6px 6px #aaa;
+    margin: 2rem 0 2rem;
+    padding:8px 8px 8px 8px;
+    background-color:var(--white);
+    opacity: .7;
+    
+}
+
+/*-----------------------------------*/
+/*----- Navigation */
+/*-----------------------------------*/
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--gutter-medium);
+    height: var(--nav-height);
+}
+
+/*-----------------------------------*/
+/*----- Responsive Design setup - Navigation (for devices like cell phone and tablets) */
+/*-----------------------------------*/
+
+@media(max-width: 540px){
+    nav{
+        justify-content: center;
+    }
+}
+
+@media(max-width: 420px){
+    nav {
+        gap: var(--gutter-small);
+    }
+}
+
+@media(max-width: 340px){
+    nav {
+        gap: var(--gutter-x-small);
+    }
+}
+
+nav a {
+    font-size: 2.2rem;
+    position: relative;
+    overflow-x: hidden;
+    padding-bottom: 1rem;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 100%;
+    width: 100%;
+    height: 1rem;
+    display: block;
+    background: var(--lightpurple);
+    transition: all 0.2s cubic-bezier(1, 0.68, 0.16, 0.9);
+
+}
+
+nav a:hover {
+    color: var(--pink);
+}
+
+nav a:hover::after{
+    right: 0;
+    height: 2px;
+    background: var(--lightpurple) ;
+}
+
+/*-----------------------------------*/
+/*----- My Work Section */
+/*-----------------------------------*/
+
+.work-box{
+    display: flex;
+    align-items: center;
+    gap: var(--gutter-medium);
+    margin-top: var(--gutter-x-small);
+}
+
+.work-box-project {
+    max-width: 350px;
+}
+
+.work-box-img {
+    max-width: 800px;
+}
+
+.work-box p{
+    font-size: 16px;
+    
+}
+
+.work-box ul{
+    font-size: 12px;
+    padding-left: 30px;
+}
+
+/*.work-box:first-child {
+    margin-top: 100px;
+}*/
+
+.work-box:first-of-type{
+    margin-top: var(--gutter-medium);
+}
+
+/*-- Select all boxes except the last one */
+.work-box:not(:last-child) {
+    margin-bottom: var(--gutter-xxlarge);
+}
+
+.work-box-text > *:not(h3) {
+    margin-top: var(--gutter-xx-small);
+}
+
+
+
+/*.work-box-img img {
+    max-width: 100%;
+}*/
+
+@media(max-width: 1145px){
+    .work-box{
+        gap: var(--gutter-small);
+        flex-direction: column;
+        align-items: initial;
+    }
+}
+
+@media(max-width: 750px){
+    .work-box:not(:last-child) {
+        margin-bottom: var(--gutter-xlarge);
+    }
+}
+
+@media(max-width: 1350px) {
+    .work-box-img{
+        max-width: 600px;
+    }
+}
+
+@media(max-width: 1145px) {
+    .work-box-img {
+        max-width: initial;
+    }
+}
+
+
+/*-----------------------------------*/
+/*----- About Me */
+/*-----------------------------------*/
+
+.about {
+    display: flex;
+    align-items: center;
+    gap: var(--gutter-xlarge);
+    margin-top: var(--gutter-medium);
+}
+
+@media(max-width: 1145px){
+    .about {
+        flex-direction: column;
+        gap: var(--gutter-small);
+    }
+}
+
+.about-text p {
+    margin-bottom: var(--gutter-x-small);
+}
+
+.about-img{
+    flex: 0 0 650px;
+}
+
+@media(max-width: 1350px) {
+    .about-img{
+        flex:0 0 500px
+        }
+}
+
+@media(max-width: 1145px){
+    .about-img {
+        flex: initial ;
+        
+    }
+}
+
+/*-----------------------------------*/
+/*----- Footer */
+/*-----------------------------------*/
+
+footer {
+    margin: var(--gutter-large) 0 var(--gutter-small);
+    text-align: center;
+}
+
+/* Formatting for social media links when added */
+
+.footer-social {
+    margin-bottom: var(--gutter-small);
+}
+
+.footer-social a:not(:last-child){
+    margin-right: var(--gutter-xx-small);
+}
+
+.footer-social img {
+    height: 40px;
+}
+
+/*-----------------------------------*/
+/*----- Back To Top */
+/*-----------------------------------*/
+
+.back-to-top {
+    position: fixed;
+    bottom: var(--gutter-small);
+    right: var(--gutter-small);
+    background: var(--pink);
+    display: flex;
+    height: 6rem;
+    width: 6rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.2s;
+}
+
+.back-to-top.shown {
+    visibility: visible;
+    transform: none;
+    opacity: 1;
+}
+
+.back-to-top img {
+    height: 40px;
+}
+
+

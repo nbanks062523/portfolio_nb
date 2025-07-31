@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - N Banks</title>
+    
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
+    </style>
+
+    <link rel="stylesheet" href="https://use.typekit.net/cwf6mpx.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
+    
+</head>
+<body>
+  <!-- Header -->
+  <header id="top">
+    <div class="row">
+      <nav>
+        <a href="#about">About Me</a>
+        <a href="#work">My Work</a>
+        
+      </nav>
+    </div>
+    <div class="row header-text-container">
+      <div>
+        <h1>Nikisha Banks</h1>
+        <p>Data Engineer | Data Cleaning & Automation | Reporting | Business Process Improvement</p>
+        <a href="mailto:nikisha.banks2060@gmail.com" class="btn">Contact Me</a>
+      </div>
+    </div>
+  </header>
+  
+  <!-- My Work -->
+   <section id="work">
+    <div class="row">
+      <h2>My Work</h2>
+      <!-- Project 1 -->
+      <div class="work-box" >
+        <div class="work-box-project">
+          <h3>Project 1</h3>
+          <p><br>In this project, a data pipeline is created with data from Kaggle and transformed in Visual Studio using Python. The datasets are stored in Google Big Query. Several visualizations were created in Google Looker Studio to show various metrics on NFL betting.</p>
+          <p><br><b>Languages,Tools and Skills Used</b></p>
+          <ul>
+            <li>Visual Studio Code</li>
+            <li>Google Cloud</li>
+            <li>Google Looker Studio</li>
+            <li>Python</li>
+            <li>SQL</li>
+            <li>Kaggle</li>
+          </ul>
+        </div>
+        <div class="work-box-img">
+          <img src="photos/Week10_1200X800.png" alt="image for project 1"> 
+        </div>
+        
+      </div>
+
+      <!-- Project 2 -->
+      <div class="work-box">
+        <div class="work-box-project">
+          <h3>Project 2</h3>
+          <p><br>In this project, Airflow was used to orchestrate a workflow that did the following: </p>
+          <ul>
+            <li>Create a DAG (Directed Acyclic Graph) that executes tasks to add CSV files to Google Cloud beginning with two functions that act as a checklist to ensure that the data files are properly placed and to ensure that the DAG is able to connect to the Big Query client </li>
+            <li>The first 2 tasks of the DAG run the checklist functions, followed by an empty operator for branching the table creation tasks</li>
+            <li>The next task runs a loop that loads each table</li>
+            <li>Finally, another empty operator is used to bring the tasks back together</li>
+          </ul>
+          <p><br>As shown in the images, the following tables were created by the DAG: </p>
+          <ul>
+            <li><b>Food Inflation by month -</b> A table that shows the inflation rates of food by month year over year</li>
+            <li><b>Grocery Prices by month -</b> A table that shows the price of groceries month over month by state</li>
+            <li><b>SNAP Population, SNAP Poverty Population, SNAP Program Participants -</b> These tables display data around the Supplemental Nutrition Assistance Program and its recipients over time by state</li>
+          </ul>
+          <p><br><b>Languages,Tools and Skills Used</b></p>
+          <ul>
+            <li>DAG Python Operators</li>
+            <li>Visual Studio Code</li>
+            <li>Airflow</li>
+            <li>Google Big Query</li>
+          </ul>
+        </div>
+        <div class="work-box-img">
+          <img src="photos/Week14_1200X800.png" alt="image for project 2"> 
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="work-box">
+        <div class="work-box-project">
+          <h3>Project 3</h3>
+          <p><br>In this project, Airflow was used to orchestrate a workflow that did the following:</p>
+          <ul>
+            <li>Create a file that contained my name</li>
+            <li>Read my name from the file and say "Hello"</li>
+            <li>Pick 3 random apples</li>
+          </ul>
+          <p><br><b>Languages,Tools and Skills Used</b></p>
+          <ul>
+            <li>Visual Studio Code</li>
+            <li>Airflow</li>
+            <li>DAG Python & Bash Operators</li>
+          </ul>
+        </div>
+        <div class="work-box-img">
+          <img src="photos/Week11_1200x800.png" alt="image for project 3"> 
+        </div>
+      </div>
+
+        <!-- Project 4 -->
+      <div class="work-box">
+        <div class="work-box-project">
+          <h3>Project 4</h3>
+          <p><br>In this project, Power BI is used for creating a Performance Dashboard to measure compliance with entering goals for the year and the cascading of goals by senior leadership.</p>
+          <p>Data for the dashboard comes from a integration with FileMaker Pro</p>
+          <p><br><b>Languages,Tools and Skills Used</b></p>
+          <ul>
+            <li>Power BI</li>
+            <li>FileMaker Pro</li>
+            <li>ODBC Connection</li>
+          </ul>
+        </div>
+        <div class="work-box-img">
+          <img src="photos/PerfDashboard_1200x800.png" alt="image for project 4"> 
+        </div>
+        
+      </div>
+
+    </div>
+
+   </section>
+
+  <!-- About me --> 
+   <section id="about">
+    <div class="row">
+      <h2>About Me</h2>
+      <div class="about">
+        <div class="about-img">
+          <img src="photos/MePhoto_1200x800.png" alt="Self Photo">
+        </div>
+        <div class="about-text">
+          <p>I'm Nikisha, a data engineer / data professional with experience in cleaning, transforming, automating and visualizing data . I’ve helped organizations eliminate messy spreadsheets, reduce manual work, and build reliable dashboards using SQL, Power BI, Python, and ETL tools like Airflow and DBT. Whether you need clean, accurate data for reporting, or a pipeline that runs smoothly and scales, I can help turn your data chaos into clarity—fast and efficiently.
+          I've also worked extensively with tools like Filemaker Pro, SAP SuccessFactors, Workday, and more — helping organizations improve reporting accuracy, reduce manual effort, and scale their HR tech infrastructure.</p>
+          <a href="ResumeNBanks_DE.1.pdf" class="btn">My Resume</a>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+    <!-- Footer -->
+     <footer>
+        <p> Designed and Developed by Nikisha S Banks &copy; 2025 </p>
+     </footer>
+     <a aria-label="Back to Top" class="back-to-top" href="#top">
+        <img src="photos/UpArrow_400x400.png" alt="Arrow Up">
+     </a>
+</body>
+</html>
